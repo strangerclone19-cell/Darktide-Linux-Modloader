@@ -1,4 +1,17 @@
 #!/usr/bin/env bash
+# toggle_darktide_mods.sh
+# Auto-detect Warhammer 40,000 DARKTIDE installation and run tools/dtkit-patch --toggle on the game's bundle
+
+# Re-exec with bash if the script was started with /bin/sh (dash) so arrays and bash features work.
+if [ -z "${BASH_VERSION:-}" ]; then
+  if command -v bash >/dev/null 2>&1; then
+    exec bash "$0" "$@"
+  else
+    echo "This script requires bash. Please run it with bash or install bash." >&2
+    exit 1
+  fi
+fi
+
 set -euo pipefail
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -61,10 +74,8 @@ if [ -z "${DTKIT_PATH:-}" ]; then
     if [ -n "$dt" ]; then
       DTKIT_PATH="$dt"
       echo "Found dtkit-patch at: $DTKIT_PATH"
-      # if path contains /common/<gamefolder>/tools/..., try to set DARKTIDE_DIR
       case "$DTKIT_PATH" in
         */common/*/tools/dtkit-patch)
-          # strip suffix /tools/dtkit-patch to get game dir
           DARKTIDE_DIR="${DTKIT_PATH%/tools/dtkit-patch}"
           BUNDLE_PATH="$DARKTIDE_DIR/bundle"
           ;;
