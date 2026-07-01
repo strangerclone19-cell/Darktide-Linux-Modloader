@@ -12,7 +12,7 @@ Darktide modloader that works with linux
 > 7. That is all you need to do after that you can just download any mods you want and then add the mod folder name to the modloader and run the game.
 > https://www.nexusmods.com/warhammer40kdarktide/mods/8
 
-# How to Use launch_darktide.sh with Steam Launch Settings
+# Enable autopatch after every Update
 
 > ℹ️ **Steam Launch Script Instructions**
 >
