@@ -23,11 +23,11 @@ Darktide modloader that works with linux
 > 3. Under the **General** tab, find the **Launch Options** field
 > 4. Add the following launch command:
 >    ```
->    sh "<game_folder_path>/launch_darktide.sh"
+>    "<game_folder_path>/launch_darktide.sh" && %command%
 >    ```
 >    Replace `<game_folder_path>` with the full path to your game folder. Example:
 >    ```
->    sh "/home/username/.steam/steam/steamapps/common/Warhammer 40,000 DARKTIDE/launch_darktide.sh"
+>    "/home/username/.steam/steam/steamapps/common/Warhammer 40,000 DARKTIDE/launch_darktide.sh" && %command%
 >    ```
 > 5. Make sure the script has execute permissions:
 >    ```
