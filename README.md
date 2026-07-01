@@ -14,7 +14,9 @@ Darktide modloader that works with linux
 
 # How to Install Mods
 
-1. Download your mods from nexusmods or any other source
-2. Extract the mod into mod folder in your game directory
-3. Add the name of the mod into `mod_load_order.txt`
-4. Run your game and enjoy 
+> ℹ️ **After Modloader Install Instructions**
+>
+> 1. Download your mods from nexusmods or any other source
+> 2. Extract the mod into mod folder in your game directory
+> 3. Add the name of the mod into `mod_load_order.txt`
+> 4. Run your game and enjoy 
